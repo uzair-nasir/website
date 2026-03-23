@@ -138,14 +138,6 @@ h1 {
   text-wrap: balance;
 }
 
-.hero-subtitle {
-  margin-top: 0.9rem;
-  font-family: "Instrument Serif", Georgia, serif;
-  font-size: clamp(1.16rem, 2.2vw, 1.7rem);
-  font-style: italic;
-  color: var(--muted);
-}
-
 .hero-text,
 .side-note p:last-child,
 .intro-grid p,
