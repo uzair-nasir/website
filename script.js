@@ -1,29 +1,41 @@
-/*
-  Small, tasteful interactions for the site:
-  - reveal-on-scroll for section cards
-  - focus area content switcher
-*/
-
 document.addEventListener("DOMContentLoaded", () => {
   const revealItems = document.querySelectorAll(".reveal");
-  const focusTabs = document.querySelectorAll(".focus-tab");
-  const focusPanel = document.getElementById("focus-panel");
+  const experienceTabs = document.querySelectorAll(".experience-tab");
+  const experiencePanel = document.getElementById("experience-panel");
 
-  const focusContent = {
-    build: {
-      title: "Build systems that are useful, not ornamental.",
-      description:
-        "Comfortable with Python, Java, HTML/CSS, Git/GitHub, Android Studio, and VS Code — especially when the work involves clean implementation, structured data, and backend-minded thinking.",
+  const experienceContent = {
+    kollegio: {
+      role: "AI & Backend Engineering Intern",
+      org: "Kollegio",
+      copy:
+        "Built a structured dataset of 100+ college essay prompts and contributed to backend and data workflow improvements — the kind of work where organization and implementation both matter.",
+      points: [
+        "Structured messy information into a more usable internal dataset.",
+        "Worked close to backend and data workflows instead of staying purely conceptual.",
+        "Contributed in a setting where speed had to stay paired with accuracy.",
+      ],
     },
-    analyze: {
-      title: "Turn information into something more structured and usable.",
-      description:
-        "A lot of my work sits at the intersection of research, data organization, and emerging AI workflows. I like taking ambiguous input and shaping it into something clearer, cleaner, and more actionable.",
+    gmu: {
+      role: "Youth Research Council Fellow",
+      org: "George Mason University",
+      copy:
+        "Worked in a research setting where good thinking had to be backed by rigor, communication, and follow-through — not just interest.",
+      points: [
+        "Contributed in an environment that valued clarity and disciplined analysis.",
+        "Built experience around research-minded problem framing and communication.",
+        "Learned how to be useful inside a more serious academic context.",
+      ],
     },
-    communicate: {
-      title: "Work with clarity, context, and professionalism.",
-      description:
-        "Whether I’m contributing in a research setting, an internship environment, or a student leadership role, I care about being reliable, direct, and easy to collaborate with — not just technically capable.",
+    sandai: {
+      role: "DataGen Scholar + Micro-Job Contributor",
+      org: "SaNDAI Cares / SaNDAI Global",
+      copy:
+        "Worked with AI tools, data tasks, and research support work that rewarded adaptability, precision, and practical thinking around emerging technology.",
+      points: [
+        "Used AI-adjacent tools in real task-driven workflows.",
+        "Supported data and research work with an execution-first mindset.",
+        "Built comfort working across newer tools without losing structure.",
+      ],
     },
   };
 
@@ -37,9 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
       },
-      {
-        threshold: 0.16,
-      }
+      { threshold: 0.14 }
     );
 
     revealItems.forEach((item) => observer.observe(item));
@@ -47,24 +57,30 @@ document.addEventListener("DOMContentLoaded", () => {
     revealItems.forEach((item) => item.classList.add("is-visible"));
   }
 
-  focusTabs.forEach((tab) => {
+  experienceTabs.forEach((tab) => {
     tab.addEventListener("click", () => {
-      const key = tab.dataset.focus;
-      const nextState = focusContent[key];
+      const key = tab.dataset.experience;
+      const nextState = experienceContent[key];
 
-      if (!nextState || !focusPanel) {
+      if (!nextState || !experiencePanel) {
         return;
       }
 
-      focusTabs.forEach((button) => {
+      experienceTabs.forEach((button) => {
         const isSelected = button === tab;
         button.classList.toggle("is-active", isSelected);
         button.setAttribute("aria-selected", String(isSelected));
       });
 
-      focusPanel.innerHTML = `
-        <p class="focus-title">${nextState.title}</p>
-        <p class="focus-description">${nextState.description}</p>
+      const pointsMarkup = nextState.points
+        .map((point) => `<li>${point}</li>`)
+        .join("");
+
+      experiencePanel.innerHTML = `
+        <p class="experience-role">${nextState.role}</p>
+        <h3>${nextState.org}</h3>
+        <p class="experience-copy">${nextState.copy}</p>
+        <ul class="experience-points">${pointsMarkup}</ul>
       `;
     });
   });

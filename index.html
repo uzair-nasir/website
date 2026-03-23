@@ -6,9 +6,9 @@
   <title>Uzair Nasir</title>
   <meta
     name="description"
-    content="Personal website for Uzair Nasir featuring experience in AI, backend engineering, research, and cybersecurity-related work."
+    content="Uzair Nasir personal site — AI, backend, research, and cybersecurity-adjacent work."
   />
-  <meta name="theme-color" content="#f6f2ea" />
+  <meta name="theme-color" content="#f6f2ec" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -18,249 +18,143 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Decorative background layers for a soft editorial feel. -->
-  <div class="page-glow page-glow-one" aria-hidden="true"></div>
-  <div class="page-glow page-glow-two" aria-hidden="true"></div>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
 
-  <header class="site-header">
-    <div class="container nav-shell">
-      <a class="brand" href="#top" aria-label="Uzair Nasir home">Uzair Nasir</a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <main class="site-shell">
+    <section class="hero reveal">
+      <div class="hero-copy">
+        <p class="eyebrow">Uzair Nasir</p>
+        <h1>
+          Early, but already doing work that matters.
+          <span>AI, backend, research, and security-minded problem solving — without the fluff.</span>
+        </h1>
+        <p class="hero-text">
+          I’m a TJHSST student building real experience across structured data, backend workflows, applied AI, and research environments. I care about being genuinely useful fast — not just sounding ambitious.
+        </p>
 
-  <main id="top">
-    <!-- Hero section: name, positioning, headshot, and primary actions. -->
-    <section class="hero section">
-      <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <p class="hero-kicker">Built for meaningful work, early.</p>
-          <h1>
-            Uzair Nasir
-            <span>Bringing research discipline, product instinct, and technical depth into one lane.</span>
-          </h1>
-          <p class="hero-summary">
-            I’m a TJHSST student already working across AI tooling, backend systems, research, and cybersecurity-adjacent problem solving.
-            What makes my work different is range with intention: I care about shipping useful systems, structuring messy information, and learning fast enough to be genuinely useful in real environments.
-          </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="Resume-UzairN.pdf" target="_blank" rel="noreferrer">View Resume</a>
+          <a class="button button-secondary" href="mailto:uzairnasir1412@gmail.com">Email Me</a>
+        </div>
 
-          <div class="hero-actions">
-            <a class="button button-primary" href="Resume-UzairN.pdf" target="_blank" rel="noreferrer">View Resume</a>
-            <a class="button button-secondary" href="mailto:uzairnasir1412@gmail.com">Contact Me</a>
+        <div class="micro-note">
+          <span>Based in Northern Virginia</span>
+          <span>Open to internships & opportunities</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="portrait-card">
+          <img src="uzair-headshot.jpeg" alt="Portrait of Uzair Nasir" class="portrait-image" />
+          <div class="portrait-caption">
+            <p class="caption-label">What stands out</p>
+            <p class="caption-text">Range with intention — I like turning messy inputs into cleaner systems, clearer outputs, and useful work.</p>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <ul class="hero-meta" aria-label="Quick facts">
-            <li>
-              <span class="meta-label">Based in</span>
-              <span class="meta-value">Northern Virginia</span>
-            </li>
-            <li>
-              <span class="meta-label">Current lane</span>
-              <span class="meta-value">AI, backend, research</span>
-            </li>
-            <li>
-              <span class="meta-label">Best next step</span>
-              <span class="meta-value">Internship or research conversation</span>
-            </li>
+    <section class="section reveal" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">A quick read</p>
+        <h2>More substance, less filler.</h2>
+      </div>
+
+      <div class="summary-grid">
+        <article class="summary-card">
+          <p class="summary-title">I move between technical lanes well.</p>
+          <p class="summary-copy">AI, backend, research, and cybersecurity-adjacent work all show up in how I think: structured, practical, and detail-aware.</p>
+        </article>
+        <article class="summary-card">
+          <p class="summary-title">I’ve worked in real environments already.</p>
+          <p class="summary-copy">My experience isn’t just classwork — it includes internship execution, research support, and professional collaboration.</p>
+        </article>
+        <article class="summary-card">
+          <p class="summary-title">I care about usefulness.</p>
+          <p class="summary-copy">I like work that organizes, improves, or clarifies something real — whether that’s data, systems, or technical communication.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal" id="experience">
+      <div class="section-heading section-heading-row">
+        <div>
+          <p class="eyebrow">Selected experience</p>
+          <h2>Three places that show the pattern.</h2>
+        </div>
+        <p class="section-note">Tap or click through.</p>
+      </div>
+
+      <div class="experience-shell">
+        <div class="experience-tabs" role="tablist" aria-label="Experience tabs">
+          <button class="experience-tab is-active" type="button" data-experience="kollegio" aria-selected="true">Kollegio</button>
+          <button class="experience-tab" type="button" data-experience="gmu" aria-selected="false">George Mason</button>
+          <button class="experience-tab" type="button" data-experience="sandai" aria-selected="false">SaNDAI</button>
+        </div>
+
+        <article class="experience-panel" id="experience-panel">
+          <p class="experience-role">AI &amp; Backend Engineering Intern</p>
+          <h3>Kollegio</h3>
+          <p class="experience-copy">
+            Built a structured dataset of 100+ college essay prompts and contributed to backend and data workflow improvements — the kind of work where organization and implementation both matter.
+          </p>
+          <ul class="experience-points">
+            <li>Structured messy information into a more usable internal dataset.</li>
+            <li>Worked close to backend and data workflows instead of staying purely conceptual.</li>
+            <li>Contributed in a setting where speed had to stay paired with accuracy.</li>
           </ul>
-        </div>
-
-        <aside class="hero-portrait reveal" aria-label="Portrait and profile highlights">
-          <div class="portrait-frame">
-            <div class="portrait-badge">Open to internships &amp; meaningful opportunities</div>
-            <img src="uzair-headshot.jpeg" alt="Portrait of Uzair Nasir" class="portrait-image" />
-          </div>
-
-          <div class="portrait-note">
-            <p class="note-label">A quick read</p>
-            <p class="note-text">
-              Early-career, but not early-stage in impact — from structured data work and backend improvements to research-backed thinking and technical leadership.
-            </p>
-          </div>
-        </aside>
+        </article>
       </div>
     </section>
 
-    <!-- About section focused on what differentiates Uzair. -->
-    <section class="section" id="about">
-      <div class="container about-shell reveal">
-        <div class="section-heading">
-          <p class="section-label">What makes me different</p>
-          <h2>I’m not trying to look experienced — I’m trying to be useful.</h2>
+    <section class="section reveal" id="focus">
+      <div class="section-heading section-heading-row">
+        <div>
+          <p class="eyebrow">Focus</p>
+          <h2>What I work with.</h2>
         </div>
+      </div>
 
-        <div class="about-points">
-          <article class="about-card">
-            <h3>I work across disciplines without sounding scattered.</h3>
-            <p>
-              My background spans AI, backend engineering, research support, and cybersecurity-related thinking, but the common thread is solving real problems with structure and clarity.
-            </p>
-          </article>
-
-          <article class="about-card">
-            <h3>I’ve already contributed in professional settings.</h3>
-            <p>
-              From internship workflows to university research environments, I’ve worked where accuracy, initiative, and follow-through matter more than just having ideas.
-            </p>
-          </article>
-
-          <article class="about-card">
-            <h3>I learn like a builder, not just a student.</h3>
-            <p>
-              I like getting close to the actual system — how data is organized, how tools are used, where things break, and how to make the end result cleaner and more reliable.
-            </p>
-          </article>
+      <div class="focus-wrap">
+        <div class="focus-tags" aria-label="Skills and languages">
+          <span>Python</span>
+          <span>Java</span>
+          <span>HTML/CSS</span>
+          <span>Git</span>
+          <span>Research</span>
+          <span>AI tooling</span>
+          <span>English</span>
+          <span>Urdu</span>
+          <span>Hindi</span>
+          <span>Punjabi</span>
+          <span>Spanish (limited)</span>
         </div>
       </div>
     </section>
 
-    <!-- Selected experience cards with concise outcomes and context. -->
-    <section class="section" id="experience">
-      <div class="container reveal">
-        <div class="section-heading section-heading-row">
-          <div>
-            <p class="section-label">Selected experience</p>
-            <h2>A few places where I’ve already done serious work.</h2>
-          </div>
-          <p class="section-caption">Compact on purpose — enough to understand the pattern.</p>
-        </div>
-
-        <div class="experience-grid">
-          <article class="experience-card interactive-card">
-            <div class="experience-top">
-              <p class="experience-org">George Mason University</p>
-              <p class="experience-role">Youth Research Council Fellow</p>
-            </div>
-            <p class="experience-text">
-              Contributed in a research environment where curiosity had to be matched by rigor, communication, and thoughtful analysis — not just surface-level interest.
-            </p>
-          </article>
-
-          <article class="experience-card interactive-card">
-            <div class="experience-top">
-              <p class="experience-org">Kollegio</p>
-              <p class="experience-role">AI &amp; Backend Engineering Intern</p>
-            </div>
-            <p class="experience-text">
-              Built a structured dataset of 100+ college essay prompts and supported backend and data workflow improvements, helping organize information into something more usable and scalable.
-            </p>
-          </article>
-
-          <article class="experience-card interactive-card">
-            <div class="experience-top">
-              <p class="experience-org">SaNDAI Cares / SaNDAI Global</p>
-              <p class="experience-role">DataGen Scholar + Micro-Job Contributor</p>
-            </div>
-            <p class="experience-text">
-              Worked with AI tools, data tasks, and research support work that demanded careful execution, adaptability, and a practical approach to emerging technology.
-            </p>
-          </article>
-
-          <article class="experience-card interactive-card">
-            <div class="experience-top">
-              <p class="experience-org">Quantitative Finance Club</p>
-              <p class="experience-role">Co-Founder &amp; Vice President</p>
-            </div>
-            <p class="experience-text">
-              Helped shape a student-led space around analytical thinking, initiative, and leadership — creating momentum instead of waiting for it.
-            </p>
-          </article>
-        </div>
+    <section class="section contact reveal" id="contact">
+      <div class="section-heading">
+        <p class="eyebrow">Contact</p>
+        <h2>If there’s a real opportunity, reach out.</h2>
       </div>
-    </section>
 
-    <!-- Compact skills and focus section with a slightly interactive filter-style presentation. -->
-    <section class="section">
-      <div class="container skills-shell reveal">
-        <div class="section-heading section-heading-row">
-          <div>
-            <p class="section-label">Skills &amp; focus</p>
-            <h2>A compact snapshot of how I work.</h2>
-          </div>
-        </div>
-
-        <div class="focus-layout">
-          <div class="focus-switcher" role="tablist" aria-label="Focus areas">
-            <button class="focus-tab is-active" type="button" data-focus="build" aria-selected="true">Build</button>
-            <button class="focus-tab" type="button" data-focus="analyze" aria-selected="false">Analyze</button>
-            <button class="focus-tab" type="button" data-focus="communicate" aria-selected="false">Communicate</button>
-          </div>
-
-          <div class="focus-panel" id="focus-panel">
-            <p class="focus-title">Build systems that are useful, not ornamental.</p>
-            <p class="focus-description">
-              Comfortable with Python, Java, HTML/CSS, Git/GitHub, Android Studio, and VS Code — especially when the work involves clean implementation, structured data, and backend-minded thinking.
-            </p>
-          </div>
-
-          <div class="skill-tags" aria-label="Skills and languages">
-            <span>Python</span>
-            <span>Java</span>
-            <span>HTML/CSS</span>
-            <span>Git &amp; GitHub</span>
-            <span>Android Studio</span>
-            <span>VS Code</span>
-            <span>English</span>
-            <span>Urdu</span>
-            <span>Hindi</span>
-            <span>Punjabi</span>
-            <span>Spanish (limited)</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact section gives clear next actions for recruiters and hiring managers. -->
-    <section class="section" id="contact">
-      <div class="container contact-shell reveal">
-        <div class="section-heading">
-          <p class="section-label">Contact</p>
-          <h2>If there’s a strong opportunity, I’d like to hear about it.</h2>
-          <p class="contact-intro">
-            The clearest next step is simple: view my resume, send me an email, or reach out on LinkedIn.
-          </p>
-        </div>
-
-        <div class="contact-grid">
-          <a class="contact-card interactive-card" href="mailto:uzairnasir1412@gmail.com">
-            <span class="contact-label">Email</span>
-            <span class="contact-value">uzairnasir1412@gmail.com</span>
-          </a>
-
-          <a class="contact-card interactive-card" href="https://www.linkedin.com/in/nasir-uzair/" target="_blank" rel="noreferrer">
-            <span class="contact-label">LinkedIn</span>
-            <span class="contact-value">nasir-uzair</span>
-          </a>
-
-          <a class="contact-card interactive-card" href="https://github.com/your-github-here" target="_blank" rel="noreferrer">
-            <span class="contact-label">GitHub</span>
-            <span class="contact-value">Replace this placeholder</span>
-          </a>
-
-          <a class="contact-card interactive-card" href="tel:+15712349731">
-            <span class="contact-label">Phone</span>
-            <span class="contact-value">571-234-9731</span>
-          </a>
-        </div>
-
-        <div class="contact-actions">
-          <a class="button button-primary" href="Resume-UzairN.pdf" target="_blank" rel="noreferrer">Open Resume</a>
-          <a class="button button-secondary" href="mailto:uzairnasir1412@gmail.com?subject=Opportunity%20for%20Uzair%20Nasir">Email Uzair</a>
-        </div>
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:uzairnasir1412@gmail.com">
+          <span class="contact-label">Email</span>
+          <span class="contact-value">uzairnasir1412@gmail.com</span>
+        </a>
+        <a class="contact-card" href="https://www.linkedin.com/in/nasir-uzair/" target="_blank" rel="noreferrer">
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">nasir-uzair</span>
+        </a>
+        <a class="contact-card" href="tel:+15712349731">
+          <span class="contact-label">Phone</span>
+          <span class="contact-value">571-234-9731</span>
+        </a>
       </div>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-shell">
-      <p>Designed to be simple, memorable, and easy to deploy.</p>
-      <a href="#top">Back to top</a>
-    </div>
-  </footer>
 
   <script src="script.js"></script>
 </body>
