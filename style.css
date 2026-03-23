@@ -14,7 +14,7 @@
   --duration-medium: 240ms;
   --duration-reveal: 560ms;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
-  --nav-offset: 6.25rem;
+  --nav-offset: 6rem;
 }
 
 * {
@@ -133,16 +133,15 @@ ul {
 }
 
 main {
-  padding: 2rem 0 3.5rem;
+  padding: 1.35rem 0 3.2rem;
 }
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.82fr);
-  gap: 2rem;
-  align-items: start;
-  min-height: min(82vh, 760px);
-  padding: 2rem 0 3rem;
+  grid-template-columns: minmax(0, 1.08fr) minmax(260px, 0.7fr);
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.2rem 0 2rem;
 }
 
 .meta-line,
@@ -150,7 +149,7 @@ main {
 .project-kicker,
 .timeline-org,
 .timeline-date {
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -158,7 +157,7 @@ main {
 }
 
 .hero-text {
-  padding-top: 2.5rem;
+  padding-top: 1rem;
 }
 
 h1,
@@ -169,10 +168,10 @@ h2,
 }
 
 h1 {
-  margin-top: 1rem;
-  max-width: 12ch;
-  font-size: clamp(2.8rem, 6vw, 5.9rem);
-  line-height: 0.94;
+  margin-top: 0.85rem;
+  max-width: 11ch;
+  font-size: clamp(2.35rem, 4.5vw, 4.6rem);
+  line-height: 0.92;
   text-wrap: balance;
 }
 
@@ -182,31 +181,31 @@ h1 {
 .project-item p,
 .skills-row p,
 .contact-intro,
-.contact-links a,
-.hero-note p {
+.contact-links a {
   color: var(--muted);
   line-height: 1.72;
 }
 
 .hero-summary {
-  margin-top: 1.1rem;
-  max-width: 54ch;
-  font-size: 1rem;
+  margin-top: 0.95rem;
+  max-width: 50ch;
+  font-size: 0.98rem;
+  line-height: 1.62;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.65rem;
-  margin-top: 1.45rem;
+  gap: 0.55rem;
+  margin-top: 1.2rem;
 }
 
 .action-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 2.85rem;
-  padding: 0.78rem 1.05rem;
+  min-height: 2.6rem;
+  padding: 0.72rem 0.95rem;
   border: 1px solid rgba(23, 20, 18, 0.1);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.66);
@@ -243,40 +242,37 @@ h1 {
 
 .hero-side {
   display: grid;
-  gap: 1rem;
-  padding-top: 0.5rem;
+  align-self: end;
+  padding-top: 1.1rem;
 }
 
 .portrait-wrap {
   justify-self: end;
-  width: min(100%, 420px);
-  padding: 0.7rem;
+  width: min(100%, 360px);
+  padding: 0.5rem;
   background: var(--surface-strong);
   box-shadow: var(--shadow);
 }
 
 .portrait {
   width: 100%;
-  aspect-ratio: 4 / 4.8;
-  object-fit: contain;
-  object-position: center top;
+  aspect-ratio: 4 / 4.65;
+  object-fit: cover;
+  object-position: center 16%;
   background: #f2ece4;
 }
 
-.hero-note {
-  padding-left: 1.25rem;
-  border-left: 1px solid rgba(23, 20, 18, 0.1);
-}
-
-.hero-note p + p {
-  margin-top: 0.55rem;
+.portrait-wrap:hover,
+.portrait-wrap:focus-within {
+  transform: translate3d(0, -2px, 0);
+  box-shadow: 0 22px 40px rgba(43, 31, 20, 0.07);
 }
 
 .section {
   display: grid;
-  grid-template-columns: 180px minmax(0, 1fr);
-  gap: 1.8rem;
-  padding: 1.5rem 0 1.85rem;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 1.55rem;
+  padding: 1.35rem 0 1.65rem;
   border-top: 1px solid rgba(23, 20, 18, 0.09);
   scroll-margin-top: calc(var(--nav-offset) + 0.75rem);
 }
@@ -295,9 +291,9 @@ h1 {
 
 .timeline-entry {
   display: grid;
-  grid-template-columns: 170px minmax(0, 1fr);
-  gap: 1.1rem;
-  padding: 1rem 0;
+  grid-template-columns: 156px minmax(0, 1fr);
+  gap: 1rem;
+  padding: 0.9rem 0;
   border-top: 1px solid rgba(23, 20, 18, 0.09);
 }
 
@@ -369,6 +365,7 @@ h1 {
 .project-item:hover,
 .project-item:focus-visible {
   background: linear-gradient(90deg, rgba(255,255,255,0.44), transparent);
+  transform: translate3d(4px, 0, 0);
 }
 
 .project-item[data-clickable="true"] {
@@ -513,7 +510,7 @@ h1 {
 
 @media (max-width: 960px) {
   :root {
-    --nav-offset: 7.1rem;
+    --nav-offset: 7rem;
   }
 
   .hero,
@@ -536,9 +533,9 @@ h1 {
   }
 
   .hero {
-    min-height: auto;
-    gap: 1.2rem;
-    padding-top: 1.2rem;
+    gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1.6rem;
   }
 
   .hero-text,
@@ -547,21 +544,17 @@ h1 {
   }
 
   .portrait-wrap {
-    justify-self: start;
-    width: min(100%, 360px);
-    padding: 0.45rem;
+    justify-self: center;
+    width: min(100%, 340px);
+    padding: 0.38rem;
   }
 
   .portrait {
-    aspect-ratio: 4 / 4.55;
+    aspect-ratio: 4 / 4.45;
     object-fit: cover;
-    object-position: center 18%;
+    object-position: center 16%;
   }
 
-  .hero-note {
-    padding-left: 0;
-    border-left: 0;
-  }
 
   .section {
     gap: 1rem;
@@ -576,7 +569,7 @@ h1 {
 
 @media (max-width: 720px) {
   :root {
-    --nav-offset: 8.6rem;
+    --nav-offset: 8rem;
   }
 
   .frame {
@@ -586,12 +579,12 @@ h1 {
   .topbar {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.65rem;
-    padding: 0.8rem 0;
+    gap: 0.55rem;
+    padding: 0.7rem 0;
   }
 
   .topnav {
-    gap: 0.8rem 1rem;
+    gap: 0.65rem 0.9rem;
   }
 
   main {
@@ -599,46 +592,51 @@ h1 {
   }
 
   .hero {
-    gap: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
+    gap: 0.85rem;
+    padding-top: 0.75rem;
+    padding-bottom: 1.5rem;
   }
 
   h1 {
     max-width: none;
-    font-size: clamp(2rem, 8.4vw, 3.15rem);
+    font-size: clamp(1.85rem, 7.6vw, 2.7rem);
     line-height: 0.98;
   }
 
   .hero-summary {
-    font-size: 0.96rem;
-    line-height: 1.6;
+    margin-top: 0.8rem;
+    font-size: 0.94rem;
+    line-height: 1.56;
   }
 
   .hero-actions {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, max-content));
-    gap: 0.6rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem;
   }
 
   .action-link {
-    min-height: 2.7rem;
-    padding: 0.72rem 0.95rem;
+    min-height: 2.65rem;
+    padding: 0.7rem 0.88rem;
   }
 
   .portrait-wrap {
     width: min(100%, 100%);
-    padding: 0.3rem;
+    padding: 0.22rem;
   }
 
   .portrait {
-    aspect-ratio: 4 / 4.35;
+    aspect-ratio: 4 / 4.2;
     object-fit: cover;
-    object-position: center 14%;
+    object-position: center 12%;
   }
 
   .project-list {
-    gap: 0.7rem;
+    gap: 0.55rem;
+  }
+
+  .section {
+    padding: 1.1rem 0 1.35rem;
   }
 }
 
