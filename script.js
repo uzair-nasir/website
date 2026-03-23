@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "I conduct community-based research using surveys, interviews, and mixed-method analysis, then translate findings into evidence-based insights, written sections, and stakeholder-facing recommendations.",
       points: [
         "Analyze patterns and findings for an academic research paper.",
-        "Present work in professional settings, including ESSA 2026.",
+        "Present research in professional settings, including ESSA 2026.",
         "Apply ethical research practices and responsible data handling throughout the process.",
       ],
     },
@@ -68,14 +68,26 @@ document.addEventListener("DOMContentLoaded", () => {
     revealItems.forEach((item) => item.classList.add("is-visible"));
   }
 
+  const renderExperience = (key) => {
+    const nextState = experienceContent[key];
+
+    if (!nextState || !experiencePanel) {
+      return;
+    }
+
+    const pointsMarkup = nextState.points.map((point) => `<li>${point}</li>`).join("");
+
+    experiencePanel.innerHTML = `
+      <p class="experience-role">${nextState.role}</p>
+      <p class="experience-time">${nextState.time}</p>
+      <p class="experience-copy">${nextState.copy}</p>
+      <ul class="experience-points">${pointsMarkup}</ul>
+    `;
+  };
+
   experienceTabs.forEach((tab) => {
     tab.addEventListener("click", () => {
       const key = tab.dataset.experience;
-      const nextState = experienceContent[key];
-
-      if (!nextState || !experiencePanel) {
-        return;
-      }
 
       experienceTabs.forEach((button) => {
         const isSelected = button === tab;
@@ -83,14 +95,18 @@ document.addEventListener("DOMContentLoaded", () => {
         button.setAttribute("aria-selected", String(isSelected));
       });
 
-      const pointsMarkup = nextState.points.map((point) => `<li>${point}</li>`).join("");
+      if (!experiencePanel || !experienceContent[key]) {
+        return;
+      }
 
-      experiencePanel.innerHTML = `
-        <p class="experience-role">${nextState.role}</p>
-        <p class="experience-time">${nextState.time}</p>
-        <p class="experience-copy">${nextState.copy}</p>
-        <ul class="experience-points">${pointsMarkup}</ul>
-      `;
+      experiencePanel.classList.add("is-updating");
+
+      window.setTimeout(() => {
+        renderExperience(key);
+        requestAnimationFrame(() => {
+          experiencePanel.classList.remove("is-updating");
+        });
+      }, 120);
     });
   });
 });
