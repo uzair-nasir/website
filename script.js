@@ -1,10 +1,10 @@
 /*
   Minimal enhancement only:
-  - soft reveal-on-scroll for primary sections
+  - reveal sections as they enter the viewport
 */
 
 document.addEventListener("DOMContentLoaded", () => {
-  const revealItems = document.querySelectorAll(".reveal");
+  const revealItems = document.querySelectorAll(".reveal, .reveal-delay");
 
   if (!("IntersectionObserver" in window)) {
     revealItems.forEach((item) => item.classList.add("is-visible"));
@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     },
     {
-      threshold: 0.12,
-      rootMargin: "0px 0px -8% 0px",
+      threshold: 0.14,
+      rootMargin: "0px 0px -10% 0px",
     }
   );
 

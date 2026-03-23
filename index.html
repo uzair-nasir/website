@@ -6,9 +6,9 @@
   <title>Uzair Nasir</title>
   <meta
     name="description"
-    content="Uzair Nasir personal website featuring work across engineering, cybersecurity, research, data analysis, and technical support."
+    content="Uzair Nasir personal website featuring engineering, cybersecurity, research, data analysis, and technical support experience."
   />
-  <meta name="theme-color" content="#f3efe8" />
+  <meta name="theme-color" content="#f5f1ea" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -16,9 +16,9 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="shell nav-row">
+    <div class="frame topbar">
       <a class="brand" href="#top">Uzair Nasir</a>
-      <nav class="site-nav" aria-label="Primary navigation">
+      <nav class="topnav" aria-label="Primary navigation">
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
@@ -27,178 +27,186 @@
     </div>
   </header>
 
-  <main class="shell page" id="top">
+  <main class="frame" id="top">
     <section class="hero reveal">
-      <div class="hero-copy">
-        <p class="eyebrow">TJHSST · Engineering · Cybersecurity</p>
-        <h1>Building useful experience in technology and problem-solving.</h1>
+      <div class="hero-text">
+        <p class="meta-line">Thomas Jefferson High School for Science and Technology</p>
+        <h1>
+          Engineering, cybersecurity, and practical technology work —
+          approached with curiosity and care.
+        </h1>
         <p class="hero-summary">
-          I’m a TJHSST student focused on engineering, cybersecurity, and applying technology to real-world work — from research and data analysis to technical support and systems-minded projects.
+          I’m building experience across research, data analysis, engineering design, technical support, and cybersecurity-focused work, with an interest in using technology to solve real problems well.
         </p>
         <div class="hero-actions">
-          <a class="button button-primary" href="./Resume-UzairN.pdf" download="Resume-UzairN.pdf" target="_blank" rel="noreferrer">View Resume</a>
-          <a class="button button-secondary" href="mailto:uzairnasir1412@gmail.com">Contact</a>
-          <a class="button button-secondary" href="https://www.linkedin.com/in/nasir-uzair/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="action-link is-primary" href="./Resume-UzairN.pdf" download="Resume-UzairN.pdf" target="_blank" rel="noreferrer">Resume</a>
+          <a class="action-link" href="mailto:uzairnasir1412@gmail.com">Contact</a>
+          <a class="action-link" href="https://www.linkedin.com/in/nasir-uzair/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="action-link" href="#projects">Projects</a>
         </div>
       </div>
 
-      <div class="hero-media">
-        <div class="hero-photo-frame">
+      <aside class="hero-side reveal-delay">
+        <div class="portrait-wrap">
           <img
+            class="portrait"
             src="./uzair-picture.png"
             alt="Portrait of Uzair Nasir"
-            class="hero-photo"
             onerror="this.onerror=null;this.src='./uzair-headshot.jpeg';"
           />
         </div>
-      </div>
+        <div class="hero-note">
+          <p>Based in Northern Virginia.</p>
+          <p>Interested in engineering, cybersecurity, IT systems, and applied research.</p>
+        </div>
+      </aside>
     </section>
 
     <section class="section reveal" id="experience">
-      <div class="section-heading">
-        <p class="section-label">Experience</p>
-        <h2>Work that already feels real.</h2>
+      <div class="section-rail">
+        <p class="section-name">Experience</p>
       </div>
-
-      <div class="experience-list">
-        <article class="experience-card">
-          <div class="experience-top">
-            <div>
-              <h3>Youth Research Council Fellow</h3>
-              <p class="experience-org">George Mason University</p>
+      <div class="section-main">
+        <div class="timeline">
+          <article class="timeline-entry">
+            <p class="timeline-date">Jan 2026 — Present</p>
+            <div class="timeline-body">
+              <h2>Youth Research Council Fellow</h2>
+              <p class="timeline-org">George Mason University</p>
+              <p class="timeline-summary">
+                Community-based research using surveys, interviews, mixed-method analysis, and stakeholder-facing recommendations.
+              </p>
+              <ul>
+                <li>Analyze findings to identify patterns and evidence-based insights.</li>
+                <li>Contribute to an academic paper through findings and written sections.</li>
+                <li>Present research in professional settings, including ESSA 2026.</li>
+              </ul>
             </div>
-            <p class="experience-date">Jan 2026 — Present</p>
-          </div>
-          <p class="experience-summary">
-            Contributing to community-based research through surveys, interviews, mixed-method analysis, and stakeholder-facing recommendations.
-          </p>
-          <ul class="experience-points">
-            <li>Analyze findings to identify patterns and evidence-based insights.</li>
-            <li>Contribute writing and findings to an academic research paper.</li>
-            <li>Present research in professional settings, including ESSA 2026.</li>
-          </ul>
-        </article>
+          </article>
 
-        <article class="experience-card">
-          <div class="experience-top">
-            <div>
-              <h3>DataGen Scholar</h3>
-              <p class="experience-org">SaNDAI Cares</p>
+          <article class="timeline-entry">
+            <p class="timeline-date">Aug 2025 — Present</p>
+            <div class="timeline-body">
+              <h2>DataGen Scholar</h2>
+              <p class="timeline-org">SaNDAI Cares</p>
+              <p class="timeline-summary">
+                Hands-on work across AI tools, data literacy, cloud platforms, and cybersecurity-focused learning.
+              </p>
+              <ul>
+                <li>Led a 12-person team building a cybersecurity module on digital risk and AI-related threats.</li>
+                <li>Worked with Tableau, Power BI, SQL, Azure, and AWS through applied projects.</li>
+                <li>Continued certification work in data literacy and AI fundamentals.</li>
+              </ul>
             </div>
-            <p class="experience-date">Aug 2025 — Present</p>
-          </div>
-          <p class="experience-summary">
-            Building hands-on experience with AI tools, cloud platforms, data literacy, and cybersecurity-focused work.
-          </p>
-          <ul class="experience-points">
-            <li>Led a 12-person team developing a cybersecurity module on digital risk and AI-related threats.</li>
-            <li>Worked with Tableau, Power BI, SQL, Azure, and AWS through applied learning.</li>
-            <li>Continued certification work in data literacy and AI fundamentals.</li>
-          </ul>
-        </article>
+          </article>
 
-        <article class="experience-card">
-          <div class="experience-top">
-            <div>
-              <h3>DataGen Scholar Micro-Job</h3>
-              <p class="experience-org">SaNDAI Global</p>
+          <article class="timeline-entry">
+            <p class="timeline-date">Aug 2025 — Present</p>
+            <div class="timeline-body">
+              <h2>DataGen Scholar Micro-Job</h2>
+              <p class="timeline-org">SaNDAI Global</p>
+              <p class="timeline-summary">
+                Market research, cleaned data, and AI-assisted project support for practical client-facing work.
+              </p>
+              <ul>
+                <li>Conduct research to uncover actionable insights.</li>
+                <li>Clean and aggregate data to make analysis more reliable.</li>
+                <li>Use AI tools to support execution while communicating findings clearly.</li>
+              </ul>
             </div>
-            <p class="experience-date">Aug 2025 — Present</p>
-          </div>
-          <p class="experience-summary">
-            Supporting client-facing work through market research, data cleaning, and AI-assisted project execution.
-          </p>
-          <ul class="experience-points">
-            <li>Conduct research to surface practical insights for decision-making.</li>
-            <li>Clean and aggregate data so analysis is more reliable and usable.</li>
-            <li>Use AI tools to move work forward while communicating results clearly.</li>
-          </ul>
-        </article>
+          </article>
 
-        <article class="experience-card">
-          <div class="experience-top">
-            <div>
-              <h3>AI &amp; Backend Engineering Intern</h3>
-              <p class="experience-org">Kollegio</p>
+          <article class="timeline-entry">
+            <p class="timeline-date">Sep 2025 — Dec 2025</p>
+            <div class="timeline-body">
+              <h2>AI &amp; Backend Engineering Intern</h2>
+              <p class="timeline-org">Kollegio</p>
+              <p class="timeline-summary">
+                Structured data and workflow support for AI-facing tooling.
+              </p>
+              <ul>
+                <li>Built a dataset of 100+ college essay prompts for model analysis.</li>
+                <li>Cleaned and preprocessed data to improve workflow quality.</li>
+                <li>Explored automation ideas to reduce repetitive manual work.</li>
+              </ul>
             </div>
-            <p class="experience-date">Sep 2025 — Dec 2025</p>
-          </div>
-          <p class="experience-summary">
-            Supported AI-facing workflows through structured data, cleanup, and backend-minded process improvements.
-          </p>
-          <ul class="experience-points">
-            <li>Built a dataset of 100+ college essay prompts for model analysis.</li>
-            <li>Cleaned and preprocessed data to improve downstream workflow quality.</li>
-            <li>Explored automation ideas to reduce repetitive manual work.</li>
-          </ul>
-        </article>
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="section reveal" id="projects">
-      <div class="section-heading">
-        <p class="section-label">Projects</p>
-        <h2>Focused work, kept simple.</h2>
+      <div class="section-rail">
+        <p class="section-name">Projects</p>
       </div>
+      <div class="section-main">
+        <div class="project-list">
+          <a class="project-item" href="./Resume-UzairN.pdf" target="_blank" rel="noreferrer">
+            <div>
+              <p class="project-kicker">Cybersecurity</p>
+              <h2>Cybersecurity awareness module</h2>
+            </div>
+            <p>
+              Helped shape a practical training module on digital risk awareness and AI-related threats while leading a 12-person team.
+            </p>
+          </a>
 
-      <div class="project-grid">
-        <article class="project-card">
-          <h3>Cybersecurity awareness module</h3>
-          <p>
-            Helped shape a practical training module on digital risk awareness and AI-related threats while leading a 12-person team.
-          </p>
-        </article>
+          <div class="project-item">
+            <div>
+              <p class="project-kicker">Data</p>
+              <h2>College essay prompt dataset</h2>
+            </div>
+            <p>
+              Structured and cleaned a dataset of 100+ prompts to support analysis and improve downstream AI workflows.
+            </p>
+          </div>
 
-        <article class="project-card">
-          <h3>College essay prompt dataset</h3>
-          <p>
-            Structured and cleaned a dataset of 100+ prompts to support analysis and improve downstream AI workflows.
-          </p>
-        </article>
-
-        <article class="project-card">
-          <h3>Robotics research showcase</h3>
-          <p>
-            Researched robotics pathways at George Mason and presented the work through a poster-based showcase.
-          </p>
-        </article>
+          <div class="project-item">
+            <div>
+              <p class="project-kicker">Research</p>
+              <h2>Robotics research showcase</h2>
+            </div>
+            <p>
+              Researched robotics pathways at George Mason and presented the work through a poster-based showcase.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="section reveal" id="skills">
-      <div class="section-heading">
-        <p class="section-label">Skills</p>
-        <h2>A clear snapshot.</h2>
+      <div class="section-rail">
+        <p class="section-name">Skills</p>
       </div>
-
-      <div class="skills-layout">
-        <div class="skill-group">
-          <h3>Technical</h3>
-          <p>Python, Java, HTML/CSS, SQL, Git/GitHub, Azure, AWS, Tableau, Power BI</p>
+      <div class="section-main skills-main">
+        <div class="skills-row">
+          <span>Technical</span>
+          <p>Python, Java, HTML/CSS, SQL, Git/GitHub, Tableau, Power BI, Azure, AWS</p>
         </div>
-        <div class="skill-group">
-          <h3>Strengths</h3>
+        <div class="skills-row">
+          <span>Working style</span>
           <p>Research, data analysis, engineering design, technical communication, collaboration</p>
         </div>
-        <div class="skill-group">
-          <h3>Languages</h3>
+        <div class="skills-row">
+          <span>Languages</span>
           <p>English, Urdu, Hindi, Punjabi, Spanish (limited)</p>
         </div>
       </div>
     </section>
 
     <section class="section reveal" id="contact">
-      <div class="section-heading section-heading-contact">
-        <p class="section-label">Contact</p>
-        <h2>I’m always open to chatting.</h2>
+      <div class="section-rail">
+        <p class="section-name">Contact</p>
       </div>
-
-      <div class="contact-grid">
-        <a class="contact-card" href="mailto:uzairnasir1412@gmail.com">uzairnasir1412@gmail.com</a>
-        <a class="contact-card" href="https://www.linkedin.com/in/nasir-uzair/" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a class="contact-card" href="https://github.com/your-github-here" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="contact-card" href="tel:+15712349731">571-234-9731</a>
-        <a class="contact-card" href="./Resume-UzairN.pdf" download="Resume-UzairN.pdf" target="_blank" rel="noreferrer">Resume</a>
+      <div class="section-main contact-main">
+        <p class="contact-intro">I’m always open to chatting.</p>
+        <div class="contact-links">
+          <a href="mailto:uzairnasir1412@gmail.com">uzairnasir1412@gmail.com</a>
+          <a href="https://www.linkedin.com/in/nasir-uzair/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/your-github-here" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="tel:+15712349731">571-234-9731</a>
+          <a href="./Resume-UzairN.pdf" download="Resume-UzairN.pdf" target="_blank" rel="noreferrer">Resume</a>
+        </div>
       </div>
     </section>
   </main>
