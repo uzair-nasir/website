@@ -111,7 +111,6 @@ button {
 }
 
 .eyebrow,
-.section-kicker,
 .experience-role,
 .details-label {
   margin: 0;
@@ -206,20 +205,20 @@ h1 {
 .hero-proof {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.55rem;
-  margin-top: 1.1rem;
+  gap: 0.5rem;
+  margin-top: 1.05rem;
 }
 
 .hero-proof span {
   display: inline-flex;
   align-items: center;
-  min-height: 2.1rem;
-  padding: 0.45rem 0.75rem;
+  min-height: 2rem;
+  padding: 0.42rem 0.72rem;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.78);
   border: 1px solid var(--line);
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.86rem;
 }
 
 .hero-side {
@@ -288,9 +287,6 @@ h2 {
   max-width: 13ch;
 }
 
-.section-kicker {
-  color: var(--muted);
-}
 
 .intro-grid {
   display: grid;
