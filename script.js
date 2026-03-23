@@ -8,44 +8,40 @@ document.addEventListener("DOMContentLoaded", () => {
       role: "Youth Research Council Fellow · George Mason University",
       time: "Jan 2026 — Present",
       copy:
-        "I conduct community-based research using surveys, interviews, and mixed-method analysis, then translate findings into evidence-based insights, written sections, and stakeholder-facing recommendations.",
+        "Community-based research using surveys, interviews, mixed methods, and stakeholder-facing recommendations.",
       points: [
-        "Analyze patterns and findings for an academic research paper.",
+        "Contribute to an academic paper and evidence-based findings.",
         "Present research in professional settings, including ESSA 2026.",
-        "Apply ethical research practices and responsible data handling throughout the process.",
       ],
     },
     "sandai-cares": {
       role: "DataGen Scholar · SaNDAI Cares",
       time: "Aug 2025 — Present",
       copy:
-        "Built experience across AI tools, data literacy, visualization, cloud platforms, and cybersecurity education while working in a program focused on real skill development rather than theory alone.",
+        "Hands-on work across AI tools, data literacy, cloud platforms, and cybersecurity education.",
       points: [
-        "Led a 12+ person team building a cybersecurity module around digital risk awareness and AI-related threats.",
-        "Worked with tools like ChatGPT, Gamma, NotebookLM, and Synthesia.",
-        "Developed exposure to Tableau, Power BI, SQL, Azure, and AWS through applied learning.",
+        "Led a 12+ person team building a cybersecurity module on digital risk and AI-related threats.",
+        "Built exposure to Tableau, Power BI, SQL, Azure, and AWS through applied work.",
       ],
     },
     "sandai-global": {
       role: "DataGen Scholar Micro-Job · SaNDAI Global",
       time: "Aug 2025 — Present",
       copy:
-        "Supported project work through market research, cleaner data, and AI-assisted execution — the kind of role that sharpened both reliability and communication.",
+        "Market research, cleaner data, and AI-assisted execution for real project work.",
       points: [
-        "Conduct in-depth market research to uncover actionable insights.",
+        "Conduct research to surface actionable insights.",
         "Clean and aggregate data so analysis is more accurate and usable.",
-        "Use generative AI tools to move faster while still communicating results clearly.",
       ],
     },
     kollegio: {
       role: "AI & Backend Engineering Intern · Kollegio",
       time: "Sep 2025 — Dec 2025",
       copy:
-        "Worked on AI-supporting data and tooling by structuring datasets, improving preprocessing, and helping streamline technical workflows behind the scenes.",
+        "Structured data and supported technical workflows behind AI-facing tooling.",
       points: [
-        "Built and structured a dataset of 100+ college essay prompts for model analysis.",
-        "Cleaned and preprocessed data to improve downstream performance.",
-        "Explored automation to reduce manual collection work and improve efficiency.",
+        "Built a dataset of 100+ college essay prompts for model analysis.",
+        "Cleaned data and explored automation to reduce manual work.",
       ],
     },
   };
