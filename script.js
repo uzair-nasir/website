@@ -1,6 +1,6 @@
 /*
   Minimal enhancement only:
-  - subtle reveal on scroll for the major sections
+  - soft reveal-on-scroll for primary sections
 */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       threshold: 0.12,
-      rootMargin: "0px 0px -6% 0px",
+      rootMargin: "0px 0px -8% 0px",
     }
   );
 
