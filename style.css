@@ -7,12 +7,14 @@
   --surface: rgba(255, 255, 255, 0.56);
   --surface-strong: rgba(255, 255, 255, 0.82);
   --shadow: 0 18px 38px rgba(43, 31, 20, 0.05);
+  --shadow-soft: 0 10px 22px rgba(43, 31, 20, 0.045);
   --radius: 18px;
   --max-width: 1180px;
   --duration-fast: 160ms;
   --duration-medium: 240ms;
   --duration-reveal: 560ms;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --nav-offset: 6rem;
 }
 
 * {
@@ -21,6 +23,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-offset) + 0.75rem);
 }
 
 body {
@@ -223,7 +226,7 @@ h1 {
 
 .action-link:active,
 .contact-links a:active {
-  transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0) scale(0.985);
 }
 
 .hero-side {
@@ -263,6 +266,7 @@ h1 {
   gap: 2rem;
   padding: 1.6rem 0 2rem;
   border-top: 1px solid rgba(23, 20, 18, 0.09);
+  scroll-margin-top: calc(var(--nav-offset) + 0.75rem);
 }
 
 .section-rail {
@@ -383,7 +387,7 @@ h1 {
 
 .contact-main {
   display: grid;
-  gap: 1.5rem;
+  gap: 1.35rem;
 }
 
 .contact-intro {
@@ -395,16 +399,42 @@ h1 {
 
 .contact-links {
   display: grid;
-  gap: 0.6rem;
+  grid-template-columns: repeat(2, minmax(0, 220px));
+  gap: 0.75rem;
 }
 
-.contact-links a {
+.contact-button {
   display: inline-flex;
   align-items: center;
-  width: fit-content;
-  min-height: 2.4rem;
-  padding-bottom: 0.2rem;
-  border-bottom: 1px solid rgba(23, 20, 18, 0.1);
+  gap: 0.75rem;
+  min-height: 3rem;
+  padding: 0.78rem 0.95rem;
+  border: 1px solid rgba(23, 20, 18, 0.1);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: var(--shadow-soft);
+}
+
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  color: var(--text);
+  flex: 0 0 auto;
+}
+
+.contact-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-button:hover,
+.contact-button:focus-visible {
+  border-color: rgba(23, 20, 18, 0.16);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 14px 28px rgba(43, 31, 20, 0.06);
 }
 
 .reveal {
@@ -426,11 +456,16 @@ h1 {
 }
 
 @media (max-width: 960px) {
+  :root {
+    --nav-offset: 6.8rem;
+  }
+
   .hero,
   .section,
   .timeline-entry,
   .project-item,
-  .skills-row {
+  .skills-row,
+  .contact-links {
     grid-template-columns: 1fr;
   }
 
@@ -466,6 +501,10 @@ h1 {
 }
 
 @media (max-width: 720px) {
+  :root {
+    --nav-offset: 7.8rem;
+  }
+
   .frame {
     width: min(calc(100% - 1rem), var(--max-width));
   }
