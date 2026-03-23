@@ -13,7 +13,11 @@
   --radius-xl: 36px;
   --radius-lg: 24px;
   --radius-md: 18px;
-  --transition: 220ms ease;
+  --duration-fast: 180ms;
+  --duration-medium: 320ms;
+  --duration-reveal: 720ms;
+  --ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft: cubic-bezier(0.16, 1, 0.3, 1);
   --max-width: 1080px;
 }
 
@@ -88,6 +92,7 @@ button {
   box-shadow: var(--shadow);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
+  transition: box-shadow var(--duration-medium) var(--ease-soft), border-color var(--duration-medium) var(--ease-soft);
 }
 
 .hero {
@@ -163,7 +168,13 @@ h1 {
 .experience-tab,
 .contact-link,
 .details-list span {
-  transition: transform var(--transition), border-color var(--transition), background var(--transition), color var(--transition), box-shadow var(--transition);
+  transition:
+    transform var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-medium) var(--ease-soft),
+    background-color var(--duration-medium) var(--ease-soft),
+    color var(--duration-medium) var(--ease-soft),
+    box-shadow var(--duration-medium) var(--ease-soft),
+    opacity var(--duration-medium) var(--ease-soft);
 }
 
 .button {
@@ -191,7 +202,7 @@ h1 {
 .experience-tab:hover,
 .contact-link:hover,
 .details-list span:hover {
-  transform: translateY(-2px);
+  transform: translate3d(0, -1.5px, 0);
 }
 
 .hero-meta {
@@ -228,6 +239,9 @@ h1 {
   object-fit: cover;
   object-position: center top;
   border-radius: 20px;
+  transform: translateZ(0);
+  transition: transform var(--duration-medium) var(--ease-soft), filter var(--duration-medium) var(--ease-soft);
+  will-change: transform;
 }
 
 .side-note {
@@ -357,6 +371,7 @@ h2 {
   background: rgba(255, 255, 255, 0.84);
   border: 1px solid var(--line);
   color: var(--muted);
+  will-change: transform;
 }
 
 .contact-row {
@@ -370,17 +385,19 @@ h2 {
   align-items: center;
   min-height: 3rem;
   padding: 0.85rem 1rem;
+  will-change: transform;
 }
 
 .reveal {
   opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 600ms ease, transform 600ms ease;
+  transform: translate3d(0, 14px, 0);
+  transition: opacity var(--duration-reveal) var(--ease-soft), transform var(--duration-reveal) var(--ease-soft);
+  will-change: transform, opacity;
 }
 
 .reveal.is-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
 }
 
 @media (max-width: 920px) {
@@ -429,6 +446,19 @@ h2 {
   }
 }
 
+@media (hover: hover) {
+  .portrait-frame:hover .portrait-image,
+  .portrait-frame:focus-within .portrait-image {
+    transform: translate3d(0, -2px, 0) scale(1.01);
+  }
+
+  .hero:hover,
+  .section:hover {
+    box-shadow: 0 30px 86px rgba(58, 36, 21, 0.09);
+    border-color: rgba(24, 20, 17, 0.12);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -439,10 +469,18 @@ h2 {
   *::after {
     transition: none !important;
     animation: none !important;
+    scroll-behavior: auto !important;
   }
 
   .reveal {
     opacity: 1;
     transform: none;
+    will-change: auto;
+  }
+
+  .portrait-image,
+  .details-list span,
+  .contact-link {
+    will-change: auto;
   }
 }
