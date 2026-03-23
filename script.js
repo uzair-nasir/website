@@ -4,37 +4,48 @@ document.addEventListener("DOMContentLoaded", () => {
   const experiencePanel = document.getElementById("experience-panel");
 
   const experienceContent = {
-    kollegio: {
-      role: "AI & Backend Engineering Intern",
-      org: "Kollegio",
-      copy:
-        "Built a structured dataset of 100+ college essay prompts and contributed to backend and data workflow improvements — the kind of work where organization and implementation both matter.",
-      points: [
-        "Structured messy information into a more usable internal dataset.",
-        "Worked close to backend and data workflows instead of staying purely conceptual.",
-        "Contributed in a setting where speed had to stay paired with accuracy.",
-      ],
-    },
     gmu: {
-      role: "Youth Research Council Fellow",
-      org: "George Mason University",
+      role: "Youth Research Council Fellow · George Mason University",
+      time: "Jan 2026 — Present",
       copy:
-        "Worked in a research setting where good thinking had to be backed by rigor, communication, and follow-through — not just interest.",
+        "I conduct community-based research using surveys, interviews, and mixed-method analysis, then translate findings into evidence-based insights, written sections, and stakeholder-facing recommendations.",
       points: [
-        "Contributed in an environment that valued clarity and disciplined analysis.",
-        "Built experience around research-minded problem framing and communication.",
-        "Learned how to be useful inside a more serious academic context.",
+        "Analyze patterns and findings for an academic research paper.",
+        "Present work in professional settings, including ESSA 2026.",
+        "Apply ethical research practices and responsible data handling throughout the process.",
       ],
     },
-    sandai: {
-      role: "DataGen Scholar + Micro-Job Contributor",
-      org: "SaNDAI Cares / SaNDAI Global",
+    "sandai-cares": {
+      role: "DataGen Scholar · SaNDAI Cares",
+      time: "Aug 2025 — Present",
       copy:
-        "Worked with AI tools, data tasks, and research support work that rewarded adaptability, precision, and practical thinking around emerging technology.",
+        "Built experience across AI tools, data literacy, visualization, cloud platforms, and cybersecurity education while working in a program focused on real skill development rather than theory alone.",
       points: [
-        "Used AI-adjacent tools in real task-driven workflows.",
-        "Supported data and research work with an execution-first mindset.",
-        "Built comfort working across newer tools without losing structure.",
+        "Led a 12+ person team building a cybersecurity module around digital risk awareness and AI-related threats.",
+        "Worked with tools like ChatGPT, Gamma, NotebookLM, and Synthesia.",
+        "Developed exposure to Tableau, Power BI, SQL, Azure, and AWS through applied learning.",
+      ],
+    },
+    "sandai-global": {
+      role: "DataGen Scholar Micro-Job · SaNDAI Global",
+      time: "Aug 2025 — Present",
+      copy:
+        "Supported project work through market research, cleaner data, and AI-assisted execution — the kind of role that sharpened both reliability and communication.",
+      points: [
+        "Conduct in-depth market research to uncover actionable insights.",
+        "Clean and aggregate data so analysis is more accurate and usable.",
+        "Use generative AI tools to move faster while still communicating results clearly.",
+      ],
+    },
+    kollegio: {
+      role: "AI & Backend Engineering Intern · Kollegio",
+      time: "Sep 2025 — Dec 2025",
+      copy:
+        "Worked on AI-supporting data and tooling by structuring datasets, improving preprocessing, and helping streamline technical workflows behind the scenes.",
+      points: [
+        "Built and structured a dataset of 100+ college essay prompts for model analysis.",
+        "Cleaned and preprocessed data to improve downstream performance.",
+        "Explored automation to reduce manual collection work and improve efficiency.",
       ],
     },
   };
@@ -72,13 +83,11 @@ document.addEventListener("DOMContentLoaded", () => {
         button.setAttribute("aria-selected", String(isSelected));
       });
 
-      const pointsMarkup = nextState.points
-        .map((point) => `<li>${point}</li>`)
-        .join("");
+      const pointsMarkup = nextState.points.map((point) => `<li>${point}</li>`).join("");
 
       experiencePanel.innerHTML = `
         <p class="experience-role">${nextState.role}</p>
-        <h3>${nextState.org}</h3>
+        <p class="experience-time">${nextState.time}</p>
         <p class="experience-copy">${nextState.copy}</p>
         <ul class="experience-points">${pointsMarkup}</ul>
       `;
