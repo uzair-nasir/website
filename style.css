@@ -405,6 +405,90 @@ h1 {
   text-transform: uppercase;
 }
 
+.outside-main {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.outside-intro {
+  max-width: 52ch;
+  color: var(--muted);
+  line-height: 1.62;
+}
+
+.outside-feature,
+.outside-card {
+  display: grid;
+  gap: 0.72rem;
+  padding: 0.88rem 0;
+  border-top: 1px solid rgba(23, 20, 18, 0.09);
+}
+
+.outside-kicker {
+  color: var(--accent);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.outside-copy {
+  display: grid;
+  gap: 0.36rem;
+}
+
+.outside-copy p:last-child {
+  color: var(--muted);
+  line-height: 1.58;
+}
+
+.outside-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.58rem;
+}
+
+.outside-photo,
+.outside-media {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(23, 20, 18, 0.08);
+  background: rgba(255, 255, 255, 0.54);
+}
+
+.outside-photo {
+  aspect-ratio: 16 / 10;
+}
+
+.outside-media {
+  aspect-ratio: 16 / 10;
+}
+
+.outside-photo img,
+.outside-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition:
+    transform var(--duration-medium) var(--ease),
+    filter var(--duration-medium) var(--ease);
+}
+
+.outside-feature:hover img,
+.outside-card:hover img,
+.outside-feature:focus-within img,
+.outside-card:focus-within img {
+  transform: scale(1.02);
+  filter: brightness(1.03);
+}
+
+.outside-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.78rem;
+}
+
 .contact-main {
   display: grid;
   gap: 1.35rem;
@@ -525,6 +609,7 @@ h1 {
   .timeline-entry,
   .project-item,
   .skills-row,
+  .outside-grid,
   .contact-links {
     grid-template-columns: 1fr;
   }
@@ -569,7 +654,9 @@ h1 {
 
   .timeline-entry,
   .project-item,
-  .skills-row {
+  .skills-row,
+  .outside-feature,
+  .outside-card {
     gap: 0.7rem;
   }
 }
@@ -649,6 +736,24 @@ h1 {
 
   .project-list {
     gap: 0.55rem;
+  }
+
+  .outside-main {
+    gap: 0.72rem;
+  }
+
+  .outside-feature,
+  .outside-card {
+    padding: 0.72rem 0;
+  }
+
+  .outside-gallery {
+    gap: 0.46rem;
+  }
+
+  .outside-photo,
+  .outside-media {
+    aspect-ratio: 16 / 11;
   }
 
   .section {
