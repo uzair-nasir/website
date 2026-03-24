@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       event.preventDefault();
-      const top = target.getBoundingClientRect().top + window.scrollY - getScrollOffset();
+      const top = target.getBoundingClientRect().top + window.scrollY - Math.max(getScrollOffset() - 8, 0);
       window.scrollTo({ top, behavior: "smooth" });
       setActiveLink(link.dataset.sectionLink);
     });
