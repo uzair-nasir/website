@@ -407,7 +407,7 @@ h1 {
 
 .outside-main {
   display: grid;
-  gap: 0.9rem;
+  gap: 0.82rem;
 }
 
 .outside-intro {
@@ -420,8 +420,12 @@ h1 {
 .outside-card {
   display: grid;
   gap: 0.72rem;
-  padding: 0.88rem 0;
+  padding: 0.78rem 0;
   border-top: 1px solid rgba(23, 20, 18, 0.09);
+}
+
+.outside-feature {
+  gap: 0.64rem;
 }
 
 .outside-kicker {
@@ -445,7 +449,7 @@ h1 {
 .outside-gallery {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.58rem;
+  gap: 0.52rem;
 }
 
 .outside-photo,
@@ -457,11 +461,11 @@ h1 {
 }
 
 .outside-photo {
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
 }
 
 .outside-media {
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 11;
 }
 
 .outside-photo img,
@@ -486,7 +490,7 @@ h1 {
 .outside-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.78rem;
+  gap: 0.7rem;
 }
 
 .contact-main {
@@ -739,21 +743,21 @@ h1 {
   }
 
   .outside-main {
-    gap: 0.72rem;
+    gap: 0.62rem;
   }
 
   .outside-feature,
   .outside-card {
-    padding: 0.72rem 0;
+    padding: 0.64rem 0;
   }
 
   .outside-gallery {
-    gap: 0.46rem;
+    gap: 0.4rem;
   }
 
   .outside-photo,
   .outside-media {
-    aspect-ratio: 16 / 11;
+    aspect-ratio: 16 / 10;
   }
 
   .section {
