@@ -4,428 +4,158 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Uzair Nasir</title>
-  <meta name="description" content="Uzair Nasir personal website" />
-  <style>
-    :root {
-      --bg: #f4f7fb;
-      --card: rgba(255, 255, 255, 0.72);
-      --text: #111827;
-      --muted: #5b6475;
-      --line: rgba(17, 24, 39, 0.08);
-      --accent: #2563eb;
-      --accent-soft: rgba(37, 99, 235, 0.08);
-      --shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
-      --radius: 24px;
-      --max: 860px;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(37, 99, 235, 0.14), transparent 28%),
-        radial-gradient(circle at bottom right, rgba(99, 102, 241, 0.12), transparent 24%),
-        var(--bg);
-      min-height: 100vh;
-    }
-
-    a { color: inherit; text-decoration: none; }
-
-    .wrap {
-      width: min(calc(100% - 24px), var(--max));
-      margin: 0 auto;
-      padding: 22px 0 34px;
-    }
-
-    .card {
-      background: var(--card);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border: 1px solid rgba(255,255,255,0.55);
-      box-shadow: var(--shadow);
-      border-radius: var(--radius);
-    }
-
-    .hero {
-      padding: 22px;
-    }
-
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 20px;
-    }
-
-    .name-mini {
-      font-size: 0.95rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
-    .nav-right {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .btn, .chip {
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.75);
-      color: var(--text);
-      border-radius: 999px;
-      padding: 10px 14px;
-      font: inherit;
-      cursor: pointer;
-      transition: 0.18s ease;
-    }
-
-    .btn:hover, .chip:hover {
-      transform: translateY(-1px);
-      border-color: rgba(37, 99, 235, 0.22);
-    }
-
-    .btn.dark {
-      background: var(--text);
-      color: white;
-      border-color: var(--text);
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 120px 1fr;
-      gap: 18px;
-      align-items: center;
-    }
-
-    .profile-wrap {
-      position: relative;
-      width: 120px;
-      height: 120px;
-    }
-
-    .profile-ring {
-      position: absolute;
-      inset: -6px;
-      border-radius: 30px;
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.18), rgba(99, 102, 241, 0.18));
-      z-index: 0;
-      transition: transform 0.25s ease;
-    }
-
-    .profile-img {
-      position: relative;
-      z-index: 1;
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 26px;
-      display: block;
-      border: 1px solid var(--line);
-      background: #e5e7eb;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      padding: 7px 11px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-size: 0.86rem;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      line-height: 0.96;
-      letter-spacing: -0.07em;
-    }
-
-    .lead {
-      margin: 10px 0 0;
-      color: var(--muted);
-      max-width: 560px;
-      font-size: 0.98rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 16px;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .stat {
-      padding: 14px 16px;
-      border-radius: 18px;
-      background: rgba(255,255,255,0.7);
-      border: 1px solid var(--line);
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 0.78rem;
-      color: var(--muted);
-      margin-bottom: 5px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .stat span {
-      font-size: 0.95rem;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-    }
-
-    .section {
-      margin-top: 14px;
-      padding: 20px;
-    }
-
-    .section-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 14px;
-    }
-
-    .section h2 {
-      margin: 0;
-      font-size: 1.05rem;
-      letter-spacing: -0.03em;
-    }
-
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .chip.active {
-      background: var(--text);
-      color: white;
-      border-color: var(--text);
-    }
-
-    .panel {
-      padding: 16px;
-      border-radius: 18px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.7);
-      min-height: 88px;
-    }
-
-    .panel p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.65;
-    }
-
-    .links {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 14px;
-    }
-
-    .footer {
-      margin-top: 14px;
-      padding: 18px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .footer p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.94rem;
-    }
-
-    @media (max-width: 760px) {
-      .hero-grid, .stats {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-grid {
-        justify-items: start;
-      }
-    }
-
-    @media (max-width: 620px) {
-      .wrap {
-        width: min(calc(100% - 16px), var(--max));
-        padding-top: 16px;
-      }
-
-      .hero, .section, .footer {
-        padding: 18px;
-      }
-
-      .nav, .section-top, .footer {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-  </style>
+  <meta name="description" content="Uzair Nasir — personal website featuring experience in engineering, cybersecurity-related work, research, and practical technical projects." />
+  <meta name="theme-color" content="#f6f7f9" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-  <div class="wrap">
-    <section class="card hero">
-      <div class="nav">
-        <div class="name-mini">Uzair Nasir</div>
-        <div class="nav-right">
-          <button class="btn" id="modeBtn" type="button">Theme</button>
-          <a class="btn dark" href="mailto:uzairnasir1412@gmail.com">Email</a>
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="#top">Uzair Nasir</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <section class="hero reveal">
+      <div class="hero-copy">
+        <p class="eyebrow">TJHSST</p>
+        <h1>Engineering, cybersecurity, and practical technical work.</h1>
+        <p class="lead">
+          TJHSST student building experience across cybersecurity, research, data work, and technical support.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="./Resume-UzairN.pdf" download="Resume-UzairN.pdf" target="_blank" rel="noreferrer">View Resume</a>
+          <a class="button button-secondary" href="#contact">Contact</a>
         </div>
       </div>
 
-      <div class="hero-grid">
-        <div class="profile-wrap" id="profileWrap">
-          <div class="profile-ring"></div>
-          <img src="uzair-headshot.jpeg" alt="Uzair Nasir" class="profile-img" />
-        </div>
+      <figure class="hero-photo">
+        <img
+          src="./uzair-nasir-headshot.png"
+          alt="Portrait of Uzair Nasir"
+          width="822"
+          height="822"
+          onerror="this.onerror=null;this.src='./uzair-headshot.jpeg';"
+        />
+      </figure>
+    </section>
 
-        <div>
-          <div class="eyebrow">Student • AI • Cyber • Research</div>
-          <h1>Simple work. Real growth.</h1>
-          <p class="lead">
-            I’m a TJHSST student interested in AI, backend engineering, cybersecurity, and research.
-            I like building useful things and getting better every year.
-          </p>
+    <section id="about" class="section reveal">
+      <h2>About</h2>
+      <p>
+        I’m a student at Thomas Jefferson High School for Science and Technology focused on engineering and cybersecurity, with hands-on experience in research, structured data work, and cybersecurity education backed by clear communication and practical execution.
+      </p>
+    </section>
 
-          <div class="hero-actions">
-            <a class="btn" href="https://www.linkedin.com/in/nasir-uzair/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a class="btn" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
-            <button class="btn" id="funBtn" type="button">Click Me</button>
+    <section id="experience" class="section reveal">
+      <h2>Experience</h2>
+      <div class="item-list">
+        <article class="item-row">
+          <div>
+            <h3>Youth Research Council Fellow</h3>
+            <p class="meta">George Mason University · Jan 2026 — Present</p>
           </div>
-        </div>
-      </div>
+          <p>Conduct community-based research using surveys, interviews, and mixed-method analysis with stakeholder-facing recommendations.</p>
+        </article>
 
-      <div class="stats">
-        <div class="stat">
-          <strong>School</strong>
-          <span>TJHSST</span>
-        </div>
-        <div class="stat">
-          <strong>Focus</strong>
-          <span>AI, backend, cyber</span>
-        </div>
-        <div class="stat">
-          <strong>Languages</strong>
-          <span>Urdu, Hindi, Punjabi, Spanish</span>
-        </div>
-      </div>
-    </section>
+        <article class="item-row">
+          <div>
+            <h3>AI &amp; Backend Engineering Intern</h3>
+            <p class="meta">Kollegio · Sep 2025 — Dec 2025</p>
+          </div>
+          <p>Built and cleaned a 100+ prompt dataset and helped improve workflow quality for AI-related tooling.</p>
+        </article>
 
-    <section class="card section">
-      <div class="section-top">
-        <h2>About</h2>
-        <div class="chips" id="chips">
-          <button class="chip active" data-text="I’m most interested in AI, backend systems, cybersecurity, and research with real-world impact.">Interests</button>
-          <button class="chip" data-text="I speak Urdu, Hindi, Punjabi, and Spanish.">Languages</button>
-          <button class="chip" data-text="I like practical projects, clean design, and work that actually helps people.">Style</button>
-        </div>
-      </div>
+        <article class="item-row">
+          <div>
+            <h3>DataGen Scholar &amp; Cybersecurity Team Lead</h3>
+            <p class="meta">SaNDAI Cares · Aug 2025 — Present</p>
+          </div>
+          <p>Applied AI/data tools across projects and led a cybersecurity awareness module team focused on digital risk and AI-related threats.</p>
+        </article>
 
-      <div class="panel">
-        <p id="panelText">I’m most interested in AI, backend systems, cybersecurity, and research with real-world impact.</p>
-      </div>
-
-      <div class="links">
-        <a class="btn" href="/Resume-UzairN.pdf" target="_blank" rel="noreferrer">Resume</a>
-        <a class="btn" href="mailto:uzairnasir1412@gmail.com">Contact</a>
+        <article class="item-row">
+          <div>
+            <h3>DataGen Scholar Micro-Job</h3>
+            <p class="meta">SaNDAI Global · Aug 2025 — Present</p>
+          </div>
+          <p>Supported client-facing work through market research, structured data cleanup, and AI-assisted execution.</p>
+        </article>
       </div>
     </section>
 
-    <footer class="card footer">
-      <p id="statusText">Open to internships, projects, and good conversations.</p>
-      <button class="btn" id="statusBtn" type="button">Change Mood</button>
-    </footer>
-  </div>
+    <section id="projects" class="section reveal">
+      <h2>Projects</h2>
+      <div class="item-list">
+        <article class="item-row">
+          <div>
+            <h3>FCPS Student Digital Safety Audit</h3>
+            <p class="meta">Cybersecurity</p>
+          </div>
+          <p>Reviewed student-facing digital safety patterns and produced focused recommendations to improve awareness and safe online behavior.</p>
+        </article>
 
-  <script>
-    const chips = document.querySelectorAll('.chip');
-    const panelText = document.getElementById('panelText');
-    const funBtn = document.getElementById('funBtn');
-    const statusBtn = document.getElementById('statusBtn');
-    const statusText = document.getElementById('statusText');
-    const modeBtn = document.getElementById('modeBtn');
-    const root = document.documentElement;
-    const profileWrap = document.getElementById('profileWrap');
-    const moods = [
-      'Open to internships, projects, and good conversations.',
-      'Currently learning, building, and improving.',
-      'Focused on useful work and steady growth.',
-      'Always down to talk tech, research, or ideas.'
-    ];
-    let moodIndex = 0;
-    let dark = false;
+        <article class="item-row">
+          <div>
+            <h3>Phishing Detection &amp; Awareness Web Tool</h3>
+            <p class="meta">Security Web Tool</p>
+          </div>
+          <p>Built a lightweight educational tool to help users identify phishing indicators and strengthen day-to-day security awareness.</p>
+        </article>
 
-    chips.forEach((chip) => {
-      chip.addEventListener('click', () => {
-        chips.forEach((c) => c.classList.remove('active'));
-        chip.classList.add('active');
-        panelText.textContent = chip.dataset.text;
-      });
-    });
+        <article class="item-row">
+          <div>
+            <h3>BrightSpeak</h3>
+            <p class="meta">Assistive Communication Wearable</p>
+          </div>
+          <p>Designed through the MIT Beaver Works CRE[AT]E Challenge as a wearable assistive communication concept for a nonverbal student.</p>
+        </article>
+      </div>
+    </section>
 
-    funBtn.addEventListener('click', () => {
-      const lines = [
-        'Building. Learning. Repeating.',
-        'Small steps still count.',
-        'Useful beats flashy.',
-        'Real progress > fake hype.'
-      ];
-      const pick = lines[Math.floor(Math.random() * lines.length)];
-      panelText.textContent = pick;
-      chips.forEach((c) => c.classList.remove('active'));
-    });
+    <section id="skills" class="section reveal">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <article class="skill-group">
+          <h3>Languages</h3>
+          <p>Python, Java, SQL, HTML/CSS</p>
+        </article>
+        <article class="skill-group">
+          <h3>Security</h3>
+          <p>Phishing awareness, digital risk analysis, cybersecurity education</p>
+        </article>
+        <article class="skill-group">
+          <h3>Tools &amp; Platforms</h3>
+          <p>Git/GitHub, Tableau, Power BI, AWS, Azure, VS Code</p>
+        </article>
+        <article class="skill-group">
+          <h3>Data &amp; AI</h3>
+          <p>Data cleaning, structured datasets, mixed-method analysis, AI-assisted workflows</p>
+        </article>
+      </div>
+    </section>
 
-    statusBtn.addEventListener('click', () => {
-      moodIndex = (moodIndex + 1) % moods.length;
-      statusText.textContent = moods[moodIndex];
-    });
+    <section id="contact" class="section reveal">
+      <h2>Contact</h2>
+      <p class="contact-line">I’m always open to chatting.</p>
+      <div class="contact-links">
+        <a href="mailto:uzairnasir1412@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/nasir-uzair/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="./Resume-UzairN.pdf" download="Resume-UzairN.pdf" target="_blank" rel="noreferrer">Resume</a>
+      </div>
+    </section>
+  </main>
 
-    modeBtn.addEventListener('click', () => {
-      dark = !dark;
-      root.style.setProperty('--bg', dark ? '#0b1220' : '#f4f7fb');
-      root.style.setProperty('--card', dark ? 'rgba(15, 23, 42, 0.74)' : 'rgba(255, 255, 255, 0.72)');
-      root.style.setProperty('--text', dark ? '#f8fafc' : '#111827');
-      root.style.setProperty('--muted', dark ? '#b8c2d8' : '#5b6475');
-      root.style.setProperty('--line', dark ? 'rgba(255,255,255,0.10)' : 'rgba(17, 24, 39, 0.08)');
-      root.style.setProperty('--accent-soft', dark ? 'rgba(96, 165, 250, 0.14)' : 'rgba(37, 99, 235, 0.08)');
-      modeBtn.textContent = dark ? 'Light' : 'Theme';
-    });
-
-    profileWrap.addEventListener('mousemove', (e) => {
-      const rect = profileWrap.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const rotateY = ((x / rect.width) - 0.5) * 10;
-      const rotateX = ((y / rect.height) - 0.5) * -10;
-      profileWrap.style.transform = `perspective(700px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-    });
-
-    profileWrap.addEventListener('mouseleave', () => {
-      profileWrap.style.transform = 'perspective(700px) rotateX(0deg) rotateY(0deg)';
-    });
-  </script>
+  <script src="./script.js"></script>
 </body>
 </html>
