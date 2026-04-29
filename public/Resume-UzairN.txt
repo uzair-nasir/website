@@ -1,0 +1,6 @@
+Resume placeholder
+
+Replace this file with your real resume PDF at:
+public/Resume-UzairN.pdf
+
+Then update links in src/app/page.tsx back to /Resume-UzairN.pdf if needed.
